@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gulf Coast Roofing — Demo site by Better Block Studio</title>
+<meta name="description" content="Concept website for a fictional roofing company, with a 24/7 AI receptionist. Built by Better Block Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--a:#b45309;--b:#16a34a;--d:#2a1a0c;--t:#fbf1e6;--ink:#14202b;--mut:#5b6873;--line:#e4e8ec}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit;text-decoration:none}.w{width:min(1120px,calc(100% - 32px));margin:auto}
+.demo-bar{background:#111;color:#ddd;font-size:12px;text-align:center;padding:7px 12px}.demo-bar a{color:#fff;text-decoration:underline}
+header{position:sticky;top:0;background:#fffffff2;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:12px}.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.4px}
+.logo i{width:36px;height:36px;border-radius:10px;background:var(--a);display:grid;place-items:center;color:#fff;font-style:normal;font-size:18px}
+.nav nav{display:flex;gap:24px;font-size:14px;color:var(--mut)}.btn{display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:13px 20px;font-weight:700;font-size:15px;border:0;cursor:pointer;font-family:inherit}
+.btn.p{background:var(--b);color:#fff}.btn.o{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn.a{background:var(--a);color:#fff}
+.hero{background:linear-gradient(160deg,var(--d),var(--a));color:#fff;padding:72px 0 84px;position:relative;overflow:hidden}
+.hero:after{content:'';position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:#ffffff10}
+.hero .g{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;position:relative;z-index:1}
+.pill{display:inline-flex;gap:8px;align-items:center;background:#ffffff1f;border:1px solid #ffffff33;border-radius:99px;padding:6px 12px;font-size:13px;font-weight:600}
+.pill b{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px #4ade8033}
+h1{font-size:clamp(36px,5.4vw,60px);line-height:1.04;letter-spacing:-2px;margin:18px 0 16px}.hero p{font-size:18px;color:#ffffffd9;max-width:560px;margin:0 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}.trust{display:flex;gap:22px;margin-top:26px;font-size:13px;color:#ffffffcc;flex-wrap:wrap}
+.card-call{background:#fff;color:var(--ink);border-radius:18px;padding:20px;box-shadow:0 30px 60px #0004}
+.card-call h3{margin:0 0 4px;font-size:15px}.card-call small{color:var(--mut)}.wave{display:flex;gap:3px;align-items:center;height:34px;margin:14px 0}
+.wave span{flex:1;background:var(--a);border-radius:3px;animation:wv 1.1s ease-in-out infinite}
+@keyframes wv{0%,100%{height:20%}50%{height:100%}}
+.tick{display:flex;gap:8px;flex-wrap:wrap}.tick span{font-size:12px;background:var(--t);color:var(--d);padding:6px 9px;border-radius:8px;font-weight:600}
+section{padding:72px 0}.h{max-width:640px;margin-bottom:30px}.h small{text-transform:uppercase;letter-spacing:1.5px;color:var(--a);font-weight:800;font-size:12px}
+.h h2{font-size:clamp(28px,3.8vw,40px);letter-spacing:-1.2px;line-height:1.1;margin:8px 0 10px}.h p{color:var(--mut);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.svc{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff}
+.svc h3{margin:0 0 6px;font-size:18px}.svc p{margin:0;color:var(--mut);font-size:14px}.svc i{display:block;width:30px;height:4px;background:var(--b);border-radius:3px;margin-bottom:16px}
+.band{background:var(--t)}.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.why div{background:#fff;border-radius:14px;padding:20px}.why b{display:block;font-size:26px;color:var(--a)}.why span{font-size:14px;color:var(--mut)}
+.ava{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.chat{background:#0f172a;border-radius:18px;padding:18px;min-height:380px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:84%;padding:11px 14px;border-radius:14px;font-size:14px;opacity:0;transform:translateY(6px);transition:.35s}
+.msg.show{opacity:1;transform:none}.msg.m-ava{background:var(--a);color:#fff;border-bottom-left-radius:4px}.msg.m-caller{background:#1e293b;color:#e2e8f0;align-self:flex-end;border-bottom-right-radius:4px}
+.msg .who{display:block;font-size:11px;opacity:.75;font-weight:700;margin-bottom:2px}.flags{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}.flags span{background:#ffffff14;color:#fff;font-size:12px;padding:6px 9px;border-radius:8px;opacity:0;transition:.4s}.flags span.show{opacity:1}
+.list{list-style:none;padding:0;margin:18px 0}.list li{padding:9px 0 9px 30px;position:relative;border-bottom:1px solid var(--line);font-size:15px}.list li:before{content:'\2713';position:absolute;left:0;top:8px;width:20px;height:20px;border-radius:50%;background:var(--t);color:var(--a);font-size:12px;display:grid;place-items:center;font-weight:800}
+.area{display:flex;justify-content:space-between;align-items:center;gap:20px;background:var(--d);color:#fff;border-radius:18px;padding:34px}.area h2{margin:6px 0;font-size:28px}.area p{margin:0;color:#ffffffcc}
+form{display:grid;gap:10px}input,select,textarea{font:inherit;padding:12px;border:1px solid var(--line);border-radius:10px;width:100%}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--mut)}.fi{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:820px){.nav nav{display:none}.nav .btn{padding:9px 12px;font-size:13px}.logo{font-size:16px}.hero .g,.ava{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.why{grid-template-columns:1fr 1fr}.area{flex-direction:column;align-items:flex-start}section{padding:56px 0}}
+</style></head><body>
+<div class="demo-bar">Demo website by Better Block Studio. Gulf Coast Roofing is a fictional business. <a href="index.html#receptionist">Get this for your business →</a></div>
+<header><div class="w nav"><a class="logo" href="#"><i>🏠</i>Gulf Coast Roofing</a><nav><a href="#services">Services</a><a href="#ava">24/7 answering</a><a href="#area">Service area</a><a href="#book">Book</a></nav><a class="btn p" href="#book">☎ (407) 555-0163</a></div></header>
+<main>
+<section class="hero"><div class="w g"><div><span class="pill"><b></b>Answering now · 24 hours a day</span><h1>Storm damage? We pick up before the next band hits.</h1><p>Free roof inspections, storm repairs and full replacements across Central Florida, with help navigating your insurance claim.</p>
+<div class="cta"><a class="btn p" href="#book">☎ Call (407) 555-0163</a><a class="btn o" href="#book">Request service</a></div>
+<div class="trust"><span>✔ Licensed &amp; insured</span><span>✔ Upfront pricing</span><span>✔ Local, family-run</span></div></div>
+<div class="card-call"><h3>Ava is answering a call</h3><small>Gulf Coast Roofing · AI receptionist</small><div class="wave"><span style="animation-delay:-0.00s"></span><span style="animation-delay:-0.07s"></span><span style="animation-delay:-0.14s"></span><span style="animation-delay:-0.21s"></span><span style="animation-delay:-0.28s"></span><span style="animation-delay:-0.35s"></span><span style="animation-delay:-0.42s"></span><span style="animation-delay:-0.49s"></span><span style="animation-delay:-0.56s"></span><span style="animation-delay:-0.63s"></span><span style="animation-delay:-0.70s"></span><span style="animation-delay:-0.77s"></span><span style="animation-delay:-0.84s"></span><span style="animation-delay:-0.91s"></span><span style="animation-delay:-0.98s"></span><span style="animation-delay:-1.05s"></span><span style="animation-delay:-1.12s"></span><span style="animation-delay:-1.19s"></span><span style="animation-delay:-1.26s"></span><span style="animation-delay:-1.33s"></span><span style="animation-delay:-1.40s"></span><span style="animation-delay:-1.47s"></span><span style="animation-delay:-1.54s"></span><span style="animation-delay:-1.61s"></span><span style="animation-delay:-1.68s"></span><span style="animation-delay:-1.75s"></span><span style="animation-delay:-1.82s"></span><span style="animation-delay:-1.89s"></span></div><div class="tick"><span>🚨 Flagged URGENT</span><span>🛡 Insurance claim noted</span><span>📋 Free inspection booked</span></div></div></div></section>
+<section id="services"><div class="w"><div class="h"><small>What we do</small><h2>Roofing done right the first time</h2><p>Straight answers, clean work and a real person-quality response every time you call.</p></div><div class="grid"><article class="svc"><i></i><h3>Free inspections</h3><p>A full roof check with photos, at no cost and no pressure.</p></article><article class="svc"><i></i><h3>Storm &amp; wind damage</h3><p>Missing shingles, lifted tiles and leaks after a storm.</p></article><article class="svc"><i></i><h3>Roof replacement</h3><p>Shingle, tile and metal roofs with clear written estimates.</p></article><article class="svc"><i></i><h3>Leak detection</h3><p>We find the source, not just the stain on the ceiling.</p></article><article class="svc"><i></i><h3>Emergency tarping</h3><p>Same-day tarps when water is coming inside.</p></article><article class="svc"><i></i><h3>Insurance claims</h3><p>We document the damage and walk you through the process.</p></article></div></div></section>
+<section class="band"><div class="w why"><div><b>24/7</b><span>Every call answered, nights and weekends included</span></div><div><b>&lt;1 min</b><span>Urgent calls flagged and sent to the on-call tech</span></div><div><b>0</b><span>Voicemails left unanswered</span></div><div><b>Inspections are always free</b><span>Inspections are always free</span></div></div></section>
+<section id="ava"><div class="w ava"><div><div class="h" style="margin-bottom:10px"><small>24/7 answering</small><h2>Call any time. Ava picks up.</h2><p>Our AI receptionist answers every call in seconds, takes your details, flags emergencies and books your visit. The team gets a summary right away.</p></div>
+<ul class="list"><li>Answers in seconds, even at 2am</li><li>Reads your number back so nothing is missed</li><li>Gives safety steps for true emergencies</li><li>Sends the team an instant call summary</li></ul>
+</div>
+<div class="chat" id="chat"></div></div></section>
+<section id="area"><div class="w area"><div><small style="text-transform:uppercase;letter-spacing:1.5px;font-weight:800;font-size:12px;opacity:.8">Service area</small><h2>Proudly serving Central Florida</h2><p>Orlando · Clermont · Winter Garden · Lake Mary · Kissimmee · Apopka</p></div><a class="btn p" href="#book">☎ (407) 555-0163</a></div></section>
+<section id="book"><div class="w ava"><div class="h"><small>Request service</small><h2>Tell us what’s going on</h2><p>Or just call. Ava answers 24/7 and can book you directly.</p></div>
+<form onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;font-weight:700&quot;>Thanks! This is a demo form, so nothing was sent.</p>'"><input placeholder="Full name" required><input placeholder="Phone number" required><input placeholder="Address"><textarea rows="3" placeholder="What’s the problem?"></textarea><button class="btn p" type="submit">Send request</button></form></div></section>
+</main>
+<footer><div class="w fi"><span>© 2026 Gulf Coast Roofing (fictional) · (407) 555-0163</span><span>Concept site by <a href="index.html" style="color:var(--a);font-weight:700">Better Block Studio</a> · AI receptionist demo</span></div></footer>
+<script>
+const convo=[["ava", "Thanks for calling Gulf Coast Roofing, this is Ava. How can I help you today?"], ["caller", "Last night\u2019s storm ripped shingles off and now water\u2019s dripping in the bedroom."], ["ava", "I\u2019m sorry, let\u2019s get you help fast. Please keep everyone away from that area and don\u2019t go on the roof. I\u2019m marking this as urgent for an emergency tarp. Your name?"], ["caller", "Tasha Green, 407-555-0124, 1200 Lakeview Drive, Clermont. I\u2019m filing with insurance."], ["ava", "Thank you, Tasha. Our team will call you back as soon as possible about a tarp, and they can walk you through the claim. Is it a shingle roof?"], ["caller", "Yes, shingle. Thank you!"]], flags=["\ud83d\udea8 Flagged URGENT", "\ud83d\udee1 Insurance claim noted", "\ud83d\udccb Free inspection booked"];
+function playChat(){const box=document.getElementById('chat');box.innerHTML='';let t=200;
+convo.forEach(([who,txt])=>{const m=document.createElement('div');m.className='msg m-'+who;m.innerHTML='<span class="who">'+(who==='ava'?'Ava (AI receptionist)':'Caller')+'</span>'+txt;box.appendChild(m);setTimeout(()=>m.classList.add('show'),t);t+=Math.max(1300,txt.length*32);});
+const f=document.createElement('div');f.className='flags';flags.forEach((x,i)=>{const s=document.createElement('span');s.textContent=x;f.appendChild(s);setTimeout(()=>s.classList.add('show'),t+i*400);});box.appendChild(f);}
+const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){playChat();io.disconnect();}},{threshold:.35});io.observe(document.getElementById('chat'));
+</script></body></html>
